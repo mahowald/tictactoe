@@ -8,4 +8,6 @@ COPY tictactoe/ ./tictactoe/
 RUN python setup.py install
 COPY pytorch_dqn.pt .
 
+ENV TERM=xterm-color
+
 ENTRYPOINT ["python", "-m", "tictactoe"]
