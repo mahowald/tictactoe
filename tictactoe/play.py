@@ -14,7 +14,7 @@ from .model import Policy
 def play():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     env = TicTacToe()
-    model = load_model("pytorch_dqn-v6.pt", device)
+    model = load_model("pytorch_dqn.pt", device)
     
     done = False
     obs = env.reset()
