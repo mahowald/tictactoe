@@ -6,7 +6,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY setup.py .
 COPY tictactoe/ ./tictactoe/
 RUN python setup.py install
-COPY pytorch_dqn.pt .
+COPY pytorch_dqn-v6.pt .
 
 ENV TERM=xterm-color
 

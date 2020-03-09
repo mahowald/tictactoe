@@ -14,7 +14,7 @@ from .model import Policy
 def play():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     env = TicTacToe()
-    model = load_model("pytorch_dqn.pt", device)
+    model = load_model("pytorch_dqn-v6.pt", device)
     
     done = False
     obs = env.reset()
@@ -22,6 +22,7 @@ def play():
     
     player = 0
     while not done:
+        time.sleep(1)
         os.system("clear")
         print("Commands:\n{}|{}|{}\n-----\n{}|{}|{}\n-----\n{}|{}|{}\n\nBoard:".format(*[x for x in range(0, 9)]))
         

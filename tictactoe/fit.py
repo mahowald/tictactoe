@@ -197,7 +197,7 @@ def select_model_action(
     else:
         return (
             torch.tensor(
-                [[select_dummy_action(state.cpu().numpy())]],
+                [[random.randrange(0, 9)]],
                 device=device,
                 dtype=torch.long,
             ),
